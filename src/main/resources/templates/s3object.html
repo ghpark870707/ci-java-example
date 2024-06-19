@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>S3 Objects</title>
+  </head>
+  <body>
+    <h1>S3 Objects</h1>
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>Size</th>
+      </tr>
+      <tr th:each="s3Object : ${s3Objects}">
+        <td th:text="${s3Object.key}"></td>
+        <td th:text="${s3Object.size}"></td>
+      </tr>
+    </table>
+  </body>
+</html>
